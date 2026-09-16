@@ -7,5 +7,7 @@ requires-python = ">=3.14"
 dependencies = [
     "dotenv>=0.9.9",
     "kagglehub>=1.0.2",
+    "pandas>=2.3.3",
     "snowflake-connector-python[pandas]>=4.7.3",
+    "snowflake-snowpark-python>=1.55.0",
 ]
