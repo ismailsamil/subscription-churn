@@ -1,0 +1,10 @@
+
+models:
+  - name: stg_customers
+    description: Cleaned customer-level Telco dataset.
+
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null

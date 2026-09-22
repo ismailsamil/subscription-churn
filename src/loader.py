@@ -19,7 +19,7 @@ def write_Df_to_Snowflake(df, table_name, session):
         # Create a cursor object
 
         # Write the DataFrame to the specified Snowflake table
-        success, nchunks, nrows, _ = session.write_pandas(df, table_name,auto_create_table=True)
+        success, nchunks, nrows, _ = session.write_pandas(df, table_name,auto_create_table=True,overwrite=True)
 
         if success:
             print(f"Successfully wrote {nrows} rows to {table_name}.")

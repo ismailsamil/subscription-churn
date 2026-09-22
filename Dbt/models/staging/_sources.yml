@@ -1,0 +1,13 @@
+version: 1
+
+sources:
+  - name: snowflake
+    database: CUSTOMERS 
+    schema: PUBLIC
+
+    quoting:
+      identifier: true
+    
+    tables:
+      - name: "customers"
+        identifier: "customers_raw"

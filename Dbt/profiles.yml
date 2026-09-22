@@ -1,0 +1,14 @@
+subscription_churn:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      threads: 1
+      account: "CHKEBEA-YI73017"
+      user: "ISMAILSAMILACC@GMAIL.COM"
+      database: "CUSTOMERS"
+      schema: "PUBLIC"
+      password: "hjJBA@92#(*#jn"
+      role : "ACCOUNTADMIN"
+
+
