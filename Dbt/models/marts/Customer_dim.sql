@@ -1,8 +1,11 @@
+{{ config(
+    materialized='table',
+) }}
+
 select 
-Customer_id,
-    gender,
-   is_senior_citizen,
-   has_dependents,
-   has_partner,
-   has_churned
+DISTINCT("customer_id"),
+    "gender",
+   "is_senior_citizen",
+   "has_dependents",
+   "has_partner"   
 from {{ ref('customers_silver') }} 

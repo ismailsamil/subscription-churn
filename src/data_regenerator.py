@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     # print("Original rows:", len(df))
     df = pd.read_csv(r"C:\Users\ismsamil\OneDrive - NTT DATA EMEAL\Desktop\Subscription Churn\data\WA_Fn-UseC_-Telco-Customer-Churn.csv")
-    row_nums = 1_000_000
+    row_nums = 910_000
 
     rows = []
 
@@ -45,7 +45,7 @@ if __name__ == "__main__":
             ),
 
             "tenure": random.choice(
-                [random.randint(0, 99), None]
+                [random.randint(0, 99)]
             ),
 
             "PhoneService": random.choice(
@@ -97,25 +97,24 @@ if __name__ == "__main__":
                     "Electronic check",
                     "Mailed check",
                     "Bank transfer (automatic)",
-                    "Credit card (automatic)",
-                    None
+                    "Credit card (automatic)"
                 ]
             ),
 
             "MonthlyCharges": random.choice(
-                [round(random.uniform(0, 100), 2), None]
+                [round(random.uniform(0, 100), 2)]
             ),
 
             "TotalCharges": random.choice([
-                    round(random.uniform(0, 10000), 2),
-                        None
+                    round(random.uniform(0, 10000), 2)
     ]),
 
             "Churn": random.choice(
-                ["Yes", "No", None]
-            )
+                ["No"]
+            ),
+            "Date": (pd.Timestamp.now() + pd.DateOffset(months=1)).strftime("%Y%m")
         }
-
+    
         rows.append(data)
 
 
@@ -137,6 +136,7 @@ if __name__ == "__main__":
         df_final["MonthlyCharges"],
         errors="coerce"
     )
+    df_final["Date"]=(pd.Timestamp.now() + pd.DateOffset(months=1)).strftime("%Y%m")
     session=helper_fun()
     print("Final rows:", len(df_final))
 

@@ -1,7 +1,7 @@
 version: 1
 
 sources:
-  - name: snowflake
+  - name: "snowflake"
     database: CUSTOMERS 
     schema: PUBLIC
 

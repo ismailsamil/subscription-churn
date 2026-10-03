@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: subscription-churn
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.14
+Description-Content-Type: text/markdown
+Requires-Dist: dbt-snowflake>=1.12.0
+Requires-Dist: dotenv>=0.9.9
+Requires-Dist: faker>=40.39.0
+Requires-Dist: kagglehub>=1.0.2
+Requires-Dist: pandas>=2.3.3
+Requires-Dist: snowflake-connector-python[pandas]>=4.7.3
+Requires-Dist: snowflake-snowpark-python>=1.55.0

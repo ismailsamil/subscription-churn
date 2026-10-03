@@ -33,6 +33,6 @@ def write_Df_to_Snowflake(df, table_name, session):
 
 if __name__ == "__main__":
     session=helper_fun()
-    file_data="WA_Fn-UseC_-Telco-Customer-Churn.csv"
-    df_customers=pd.read_csv(os.path.join("data", file_data),header=0)
+    file_data=r"WA_Fn-UseC_-Telco-Customer-Churn.csv"
+    df_customers=pd.read_csv( file_data,header=0)
     write_Df_to_Snowflake(df_customers, "CUSTOMERS", session)

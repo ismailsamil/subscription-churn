@@ -10,5 +10,6 @@ subscription_churn:
       schema: "PUBLIC"
       password: "hjJBA@92#(*#jn"
       role : "ACCOUNTADMIN"
+      warehouse: "WH_BI"
 
 
