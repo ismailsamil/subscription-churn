@@ -1,9 +1,14 @@
 FROM python:3.12-slim
-RUN export DOCKER_TLS_VERIFY=0
+
+RUN apt-get update && \
+    apt-get install -y ca-certificates
+
+COPY company-ca.crt /usr/local/share/ca-certificates/company-ca.crt
+
+RUN update-ca-certificates
 
 WORKDIR /app
 
-COPY . /app
+COPY . .
 
-RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir dbt-core
+CMD ["python", "app.py"]
