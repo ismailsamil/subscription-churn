@@ -12,4 +12,15 @@ subscription_churn:
       role : "ACCOUNTADMIN"
       warehouse: "WH_BI"
 
+    ci:
+      type: snowflake
+      threads: 1
+      account: "CHKEBEA-YI73017"
+      user: "ISMAILSAMILACC@GMAIL.COM"
+      database: "CUSTOMERS"
+      schema: "PUBLIC"
+      password: "hjJBA@92#(*#jn"
+      role : "ACCOUNTADMIN"
+      warehouse: "WH_BI"
+
 

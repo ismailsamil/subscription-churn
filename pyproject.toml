@@ -13,3 +13,9 @@ dependencies = [
     "snowflake-connector-python[pandas]>=4.7.3",
     "snowflake-snowpark-python>=1.55.0",
 ]
+
+[dependency-groups]
+dev = [
+    "sqlfluff>=4.4.0",
+    "sqlfluff-templater-dbt>=4.4.0",
+]
