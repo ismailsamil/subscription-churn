@@ -58,7 +58,7 @@ Key objectives include:
                                    ▼
                         ┌─────────────────────┐
                         │      Snowflake      │
-                        │        RAW          │
+                        │        RAW  (1.4B)  │
                         └──────────┬──────────┘
                                    │
                                    ▼
